@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root 'index#home'
   get 'about', to: 'index#about'
   get 'signin', to: 'page_1#fpage'
+  resources :articles
 end

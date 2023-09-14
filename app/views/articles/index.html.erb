@@ -1,0 +1,18 @@
+<h1>this is articles listing page</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>description</th>
+                <th>action<th>
+            </tr>
+            </thead>
+            <% @article.each do |a|%>
+            <tr>
+                <td><%=a.title%></td>
+                <td><%=a.description%></td>
+                <td><%=link_to 'edit',edit_article_path(a), method: :edit %></td>
+                <td><%=link_to 'delete',articles_path(a.id), method: :delete %></td>
+            </tr><br/>
+    </table>
+<%end%>
